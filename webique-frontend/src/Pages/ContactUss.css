@@ -1,0 +1,170 @@
+#Contact{
+    height: 85vh;
+    width: 900px;
+    margin: auto;
+}
+
+#Contact>div{
+    display: flex;
+    margin-top: 50px;
+}
+#ContactAddress{
+    width: 40%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 20px;
+}
+#ContactAddress>div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#ContactAddress>div>h1{
+    font-weight: 500;
+    margin-left: 30px;
+}
+#ContactAddress>div>a{
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+    color: gray;
+    margin-left: 30px;
+}
+#ContactAddress>div>p{
+    font-weight: 500;
+    text-align: left;
+    margin-left: 30px;
+    color: gray;
+}
+
+
+#Form{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(96, 94, 94, 0.2) 0px 2px 8px 0px;
+    padding: 20px;
+    padding-top: 60px;
+}
+#Form>input{
+    height: 45px;
+    margin-top: 18px;
+    font-size: larger;
+    border: none;
+    border-bottom: 2px solid rgb(166, 163, 163);
+}
+#Form>input:focus{
+    outline: none;
+}
+#Form>input::placeholder{
+    color: rgb(150, 149, 149);
+}
+#Form>textarea{
+    margin-top: 20px;
+    font-size: larger;
+    height: 100px;
+}
+#Form>textarea:focus{
+    outline: none;
+}
+#Form>button{
+    margin-top: 20px;
+    font-size: larger;
+    height: 50px;
+    font-weight: 600;
+    color: rgb(68, 64, 64);
+}
+
+#MessageIn{
+    width: fit-content;
+    padding: 20px;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    margin-left: 50%;
+    background-color: grey;
+    border-radius: 10px;
+    color: white;
+    animation-duration: 1s;
+    animation-name: fadein;
+}
+@keyframes fadein {
+    from {background-color: transparent;
+        color: transparent;}
+    to {background-color: grey;
+        color: white;}
+}
+#MessageOut{
+    width: fit-content;
+    padding: 20px;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    margin-left: 50%;
+    background-color: white;
+    border-radius: 10px;
+    color: white;
+    animation-duration: .5s;
+    animation-name: fadeout;
+}
+@keyframes fadeout {
+    from {background-color: grey;
+        color: white;}
+    to {background-color: transparent;
+        color: transparent;}
+}
+
+@media screen and (max-width: 935px) {
+    #Contact{
+        height: fit-content;
+        width: 99%;
+        padding-bottom: 50px;
+    }
+    #Contact>div{
+        flex-direction: column;
+        align-items: center;
+    }
+    #ContactAddress{
+        width: 70%;
+    }
+    #Form{
+        width: 70%;
+    }
+}
+@media screen and (max-width: 750px){
+    #ContactAddress{
+        width: 70%;
+    }
+    #Form{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 432px){
+    #ContactAddress>div>h1{
+        font-size: 20px;
+    }
+    #Form>input{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 355px){
+    #ContactAddress>div>h1{
+        font-size: 20px;
+        margin-left: 5px;
+    }
+    #ContactAddress>div>a{
+        margin-left: 5px;
+    }
+    #ContactAddress>div>p{
+        margin-left: 5px;
+    }
+    #Form>input{
+        font-size: 15px;
+    }
+    #ContactAddress{
+        width: 80%;
+    }
+    #Form{
+        width: 80%;
+    }
+}
