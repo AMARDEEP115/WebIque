@@ -1,0 +1,127 @@
+/* -------------------------------------------------Main Footer Css------------------------------------------------ */
+#footer{
+    background-color: rgb(86, 80, 80);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    height: 400px;
+}
+/* ------------------------------------------------------Footer Top Section-------------------------------------------- */
+#footerTop{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+#FooterLogo{
+    width: 300px;
+    height: 270px;
+}
+
+#QuickLinks{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+#QuickLinks>h1{
+    color: white;
+}
+#QuickLinks>a{
+    color: white;
+    margin-left: 5px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#Socials{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+#Socials>h1{
+    color: white;
+}
+#Socials>a{
+    color: white;
+    margin-left: 5px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#Address{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+#Address>h1{
+    color: white;
+}
+#Address>a{
+    color: white;
+    text-align: left;
+    margin-left: 5px;
+    font-weight: 500;
+    text-decoration: none;
+}
+/* ------------------------------------------------------Copy right------------------------------------------------ */
+#copy{
+    color: white;
+    margin-top: 50px;
+}
+
+/* ---------------------------------------------------Small Screen CSS----------------------------------------------- */
+@media screen and (max-width: 934px) {
+    #footer{
+        height: fit-content;
+        margin-left: 0px;
+    }
+    #footerTop{
+        flex-direction: column;
+        align-items: center;
+    }
+    #QuickLinks{
+        width: 100%;
+    }
+    #QuickLinks>h1{
+        text-align: center;
+        width: 100%;
+    }
+    #QuickLinks>a{
+        text-align: center;
+        width: 100%;
+    }
+    #Socials{
+        width: 100%;
+    }
+    #Socials>h1{
+        text-align: center;
+        width: 100%;
+    }
+    #Socials>a{
+        text-align: center;
+        width: 100%;
+    }
+    #Address{
+        width: 100%;
+    }
+    #Address>h1{
+        text-align: center;
+        width: 100%;
+    }
+    #Address>a{
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 320px){
+    #FooterLogo{
+        width: 270px;
+        height: 240px;
+    }
+}

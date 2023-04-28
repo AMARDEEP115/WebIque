@@ -1,0 +1,114 @@
+#Header{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: whitesmoke;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#Logo{
+    height: 70px;
+    width: 100px;
+}
+#FullScreenNav>a{
+    font-weight: 800;
+    color: gray;
+    text-decoration: none;
+    margin-right: 20px;
+}
+#FullScreenNav>a:hover{
+    color: black;
+    text-decoration: underline;
+}
+#Drawer{
+    display: none;
+}
+#Hamburger{
+    display: none;
+}
+
+#Ii{
+    font-family: monospace;
+    color: rgb(111, 111, 113);
+    font-size: 36px;
+}
+
+@media screen and (min-width: 100px) and (max-width: 775px) {
+    #FullScreenNav{
+        display: none;
+    }
+    #Hamburger{
+        display: block;
+        width: 20px;
+    }
+    #Hamburger>div{
+        border: 2px solid black;
+        width: 100%;
+        margin-bottom: 3px;
+    }
+    #DrawerOpen{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 80vw;
+        animation-name: open;
+        animation-duration: .5s;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        background-color: white;
+        height: 100vh;
+    }
+    @keyframes open {
+        from {margin-left: -80vw;}
+        to {margin-left: 0vw;}
+    }
+    #DrawerOpen>div:first-child{
+        display: flex;
+        justify-content: space-between;
+        padding-left: 20px;
+        padding-right: 30px;
+    }
+    #DrawerClose{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation-name: close;
+        animation-duration: .5s;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        background-color: white;
+        width: 80vw;
+        height: 100vh;
+    }
+    @keyframes close {
+        from {margin-left: 0vw;}
+        to {margin-left: -80vw;}
+    }
+    #DrawerClose>div:first-child{
+        display: flex;
+        justify-content: space-between;
+        padding-left: 20px;
+        padding-right: 30px;
+    }
+
+    #SmallScreenNav{
+        display: flex;
+        flex-direction: column;
+    }
+    #SmallScreenNav>a{
+        font-weight: 800;
+        color: gray;
+        text-decoration: none;
+        padding: 20px;
+        text-align: left;
+    }
+    #SmallScreenNav>a:hover{
+        color: black;
+        text-decoration: underline;
+        background-color: whitesmoke;
+    }
+}
