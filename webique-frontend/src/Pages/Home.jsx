@@ -1,8 +1,27 @@
 import WebIque from "../Logo/WebIqueLogo.png";
 import quotesBackImg from "../Logo/quotesBackImg.png";
+import { Quotes } from "../Components/Quotes";
 import "./Homee.css";
+import { useEffect, useState } from "react";
+let id;
 
 const Home=()=>{
+    const [qts,setQts]=useState(0);
+    useEffect(()=>{
+        id=setInterval(()=>{
+            setQts(pre=>{
+                if(pre<=(Quotes.length-2)){
+                    return pre+1;
+                } else {
+                    return 0;
+                }
+            });
+        },5000);
+
+        return ()=>{
+            return clearInterval(id);
+        }
+    },[]);
     return <div id="Home">
         <div id="HLeft">
             <div>
@@ -35,13 +54,7 @@ const Home=()=>{
             <img src={WebIque} alt="Logo" />
         </div>
         <div id="HRight" style={{backgroundImage:quotesBackImg}}>
-            <h1>QUOTES</h1>
-            <h1>QUOTES</h1>
-            <h1>QUOTES</h1>
-            <h1>QUOTES</h1>
-            <h1>QUOTES</h1>
-            <h1>QUOTES</h1>
-            <h1>QUOTES</h1>
+            <p>{Quotes[qts]}</p>
         </div>
     </div>
 }
