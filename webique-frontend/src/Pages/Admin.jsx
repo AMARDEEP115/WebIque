@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { AiOutlineEye, AiOutlineEyeInvisible, AiOutlineMail } from "react-icons/ai";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import "./Admins.css";
@@ -6,9 +6,33 @@ import "./Admins.css";
 const Admin=()=>{
     const [shwPass,setShwPass]=useState(false);
     const [isAuth,setIsAuth]=useState(false);
+    const [msg,setMsg]=useState({});
+    const msgRef=useRef();
+
+    const handleAminLogin=(e)=>{
+        e.preventDefault();
+        let wrngCre={msg:"wrong emaiil or password",colr:"red"};
+        let CrctCre={msg:"Login Successfull",colr:"green"};
+        let MasDel={msg:"Message Deleted",colr:"rgb(0, 98, 255)"};
+        let Sww={msg:"Something went wrong !",colr:"orange"};
+        // setMessage("Please enter your email or phone number");
+        setMsg(Sww)
+        msgRef.current.style.display="block";
+        msgRef.current.id="ToastIn";
+        // setQuery(initialState);
+        let timeOut=setTimeout(()=>{
+            msgRef.current.id="ToastOut";
+            clearTimeout(timeOut);
+        },4000);
+        let timeOutTwo=setTimeout(()=>{
+            msgRef.current.style.display="none";
+            msgRef.current.id="Toast";
+            clearTimeout(timeOutTwo);
+        },4460);
+    }
 
     return <div id="Admin">
-        {!isAuth && <form id="AdminForm">
+        {!isAuth && <form id="AdminForm" onSubmit={(e)=>handleAminLogin(e)}>
             <h1>ADMIN LOGIN</h1>
             <input type="email" placeholder="Enter Email"/>
             <div>
@@ -16,7 +40,7 @@ const Admin=()=>{
                 {shwPass && <AiOutlineEyeInvisible onClick={()=>setShwPass(false)}/>}
                 {!shwPass && <AiOutlineEye onClick={()=>setShwPass(true)}/>}
             </div>
-            <button>LOGIN</button>
+            <button type="submit">LOGIN</button>
         </form>}
         {/* <BsFillTelephoneFill style={{marginRight:"5px",marginBottom:"-1px"}}/><AiOutlineMail style={{marginRight:"5px",marginBottom:"-1px"}}/> */}
         {isAuth && <div id="MessagesRecived">
@@ -34,6 +58,7 @@ const Admin=()=>{
                 </div>
             </div>
         </div>}
+        <div id="Toast" ref={msgRef} style={{background:msg.colr,display:"none"}}>{msg.msg}</div>
     </div>
 }
 

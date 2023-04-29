@@ -1,4 +1,7 @@
 import { Link } from "react-router-dom";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import { RiPagesLine } from "react-icons/ri";
+import { BsFillBriefcaseFill } from "react-icons/bs";
 import FooterLogo from "../Logo/FooterLogo.png";
 import "./footerr.css";
 
@@ -11,7 +14,15 @@ const Footer=()=>{
 
     return <footer id="footer">
         <div id="footerTop">
-            <img id="FooterLogo" src={FooterLogo} alt="Logo" />
+            <div>
+                <img id="FooterLogo" src={FooterLogo} alt="Logo" />
+                <div id="LinksLogo">
+                    <a href="https://www.linkedin.com/in/amar-deep-8359aa246/" target="_blank"><AiFillLinkedin/></a>
+                    <a href="https://github.com/AMARDEEP115" target="_blank"><AiFillGithub/></a>
+                    <a href="https://drive.google.com/file/d/11pN2MFLhuvhCYY2Tu3geGDQ1hh54icPE/view" target="_blank"><RiPagesLine/></a>
+                    <a href="https://amardeep115.github.io/" target="_blank"><BsFillBriefcaseFill/></a>
+                </div>
+            </div>
             <div id="Socials">
                 <h1>Social</h1>
                 <a href="https://drive.google.com/file/d/11pN2MFLhuvhCYY2Tu3geGDQ1hh54icPE/view" target="_blank" rel="noreferrer">RESUME</a>

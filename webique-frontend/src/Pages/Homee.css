@@ -1,0 +1,141 @@
+/* https://wallpapercave.com/wp/wp3738118.jpg */
+/* https://wallpapercave.com/wp/wp3738118.jpg */
+#Home{
+    background-image: url("https://wallpapercave.com/wp/wp3738118.jpg");
+    min-height: 90vh;
+    height: fit-content;
+    margin-top: -20px;
+    padding-top: 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#HLeft{
+    display: flex;
+}
+#HLeft>div{
+    margin-top: 60px;
+}
+#HLeft>div>div{
+    display: flex;
+    gap: 20px;
+    animation-name: write;
+    overflow: hidden;
+    animation-duration: 5s;
+    /* animation-iteration-count: infinite; */
+}
+#HLeft>div>div>div{
+    display: flex;
+}
+#HLeft>div>div>div>p{
+    font-weight: 500;
+    font-size: 36px;
+}
+
+@keyframes write {
+    from {width: 0%;}
+    to {width: 100%;}
+}
+
+#HLeft>img{
+    width: 250px;
+    height: 200px;
+    margin-left: -50px;
+    border-radius: 0px 50px 0px 50px;
+    margin-top: 50px;
+    animation-name: updown;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    position: relative;
+}
+@keyframes updown {
+    0%   {top:0px;}
+    25%  {top:10px;}
+    50%  {top:20px;}
+    75%  {top:10px;}
+    100% {top:0px;}
+}
+
+#HRight{
+    height: 200px;
+    background-image: url("https://c8.alamy.com/zooms/9/503bcc8dc36446068269ce9f6fe038aa/2jafx79.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 400px;
+    height: 480px;
+    padding-top: 20px;
+}
+
+@media screen and (max-width: 1151px){
+    #Home{
+        flex-direction: column;
+        align-items: center;
+    }
+    #HLeft>img{
+        margin-left: 0px;
+    }
+}
+@media screen and (max-width: 775px){
+    #HLeft{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 934px) {
+    #Home{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 481px){
+    #HLeft{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    #HLeft>div>div>div>p{
+        font-weight: 500;
+        font-size: 30px;
+    }
+    #HRight{
+        width: 350px;
+        height: 430px;
+        padding-top: 20px;
+    }
+}
+@media screen and (max-width: 396px){
+    #HLeft{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    #HLeft>div>div>div>p{
+        font-weight: 500;
+        font-size: 25px;
+    }
+    #HRight{
+        width: 300px;
+        height: 370px;
+        padding-top: 20px;
+    }
+}
+@media screen and (max-width: 344px){
+    #HLeft{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    #HLeft>div>div>div>p{
+        font-weight: 500;
+        font-size: 20px;
+    }
+    #HRight{
+        width: 250px;
+        height: 310px;
+        padding-top: 20px;
+    }
+    #HLeft>img{
+        width: 200px;
+        height: 150px;
+    }
+}
