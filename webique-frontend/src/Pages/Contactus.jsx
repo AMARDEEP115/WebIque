@@ -16,7 +16,7 @@ const ContactUs=()=>{
 
     const handleSubmit=(e)=>{
         e.preventDefault();
-        if(query.email==="" && query.number===""){
+        if(query.email==="" && query.mobile===""){
             setMessage("Please enter your email or phone number");
             reff.current.style.display="block";
             reff.current.id="MessageIn";
@@ -24,12 +24,12 @@ const ContactUs=()=>{
             let timeOut=setTimeout(()=>{
                 reff.current.id="MessageOut";
                 clearTimeout(timeOut);
-            },2000);
+            },4000);
             let timeOutTwo=setTimeout(()=>{
                 reff.current.style.display="none";
                 reff.current.id="message";
                 clearTimeout(timeOutTwo);
-            },2460);
+            },4460);
         } else {
             setMessage("Thank you for contacting us, we will reach you soon...");
             reff.current.style.display="block";
@@ -38,12 +38,12 @@ const ContactUs=()=>{
             let timeOut=setTimeout(()=>{
                 reff.current.id="MessageOut";
                 clearTimeout(timeOut);
-            },2000);
+            },4000);
             let timeOutTwo=setTimeout(()=>{
                 reff.current.style.display="none";
                 reff.current.id="message";
                 clearTimeout(timeOutTwo);
-            },2460);
+            },4460);
         }
     };
 

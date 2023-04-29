@@ -1,0 +1,281 @@
+/* ----------------------------------------Admin--------------------------------------------------------- */
+#Admin{
+    min-height: 55vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-image: url("https://thumbs.gfycat.com/HalfThunderousFlyingfox-size_restricted.gif");
+    /* background-repeat:no-repeat; */
+    background-size:contain;
+    backface-visibility: inherit;
+}
+/* ----------------------------------------Admin Form---------------------------------------------------- */
+#AdminForm{
+    width: 25%;
+    height: 380px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: white;
+}
+#AdminForm>input{
+    border: none;
+    border-bottom: 2px solid gray;
+    font-size: large;
+}
+#AdminForm>input:focus{
+    outline: none;
+}
+#AdminForm>input::placeholder{
+    color: rgb(177, 176, 176);
+}
+#AdminForm>div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+#AdminForm>div>input{
+    border: none;
+    border-bottom: 2px solid gray;
+    width: 90%;
+    font-size: large;
+}
+#AdminForm>div>input:focus{
+    outline: none;
+}
+#AdminForm>div>input::placeholder{
+    color: rgb(177, 176, 176);
+}
+#AdminForm>button{
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid white;
+    background-color: gainsboro;
+    font-weight: 600;
+}
+#AdminForm>button:hover{
+    background-color: grey;
+    color: white;
+    border-color: grey;
+    box-shadow: 0px;
+}
+
+
+/* ----------------------------------------Admin Page Messages Recived Div--------------------------------------- */
+#MessagesRecived{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+/* ----------------------------------------Admin Page Messages--------------------------------------- */
+.ARecvMsg{
+    border: 3px solid gray;
+    border-radius: 20px;
+    width: 80%;
+    padding: 10px;
+    height: fit-content;
+    background-color: white;
+}
+.ARecvMsg>div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 250px;
+}
+.ARecvMsg>div>div{
+    display: flex;
+    height: 30px;
+    padding: 0px;
+}
+.ARecvMsg>div>div>p:first-child{
+    width: 80px;
+    font-weight: 500;
+    margin-top: 0px;
+    text-align: justify;
+    margin-left: 20px;
+}
+.ARecvMsg>div>div>p:last-child{
+    width: 400px;
+    font-weight: 500;
+    margin-top: 0px;
+    text-align: justify;
+    color: grey;
+}
+.ARecvMsg>div>div>p:last-child:hover{
+    color: black;
+}
+#MessageBox>.MessageP{
+    width: 90%;
+    height: 100px;
+    overflow-wrap: break-word;
+    overflow-y: scroll;
+    border: 1px solid rgb(225, 225, 225);
+    padding: 5px;
+}
+/* width */
+#MessageBox>.MessageP::-webkit-scrollbar {
+    width: 7px;
+}
+  
+  /* Track */
+#MessageBox>.MessageP::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+}
+   
+  /* Handle */
+#MessageBox>.MessageP::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 10px;
+}
+.ARecvMsg>#MsgRmRpBox{
+    height: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 30px;
+}
+.ARecvMsg>#MsgRmRpBox>button{
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+    font-weight: 700;
+}
+.ARecvMsg>#MsgRmRpBox>button:hover{
+    color: white;
+    background-color: black;
+}
+.Reply{
+    text-decoration: none;
+    font-weight: 500;
+    color: black;
+    text-align: center;
+    margin-right: 30px;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 80px;
+    padding-top: 1px;
+}
+.Reply:hover{
+    color: white;
+    background-color: black;
+}
+
+@media screen and (max-width: 1024px) {
+    #AdminForm{
+        width: 30%;
+    }
+}
+@media screen and (max-width: 904px) {
+    #AdminForm{
+        width: 40%;
+    }
+}
+@media screen and (max-width: 758px){
+    #Admin{
+        width: 101.5%;
+    }
+    #MessagesRecived{
+        padding: 0px;
+    }
+    .ARecvMsg{
+        height: 470px;
+        flex-direction: column;
+    }
+    .ARecvMsg>div:first-child{
+        height: fit-content;
+    }
+    .ARecvMsg>div:first-child>div{
+        flex-direction: column;
+        height: fit-content;
+    }
+    .ARecvMsg>div:first-child>div>p{
+        margin-left: 10px;
+    }
+    .ARecvMsg>#MsgRmRpBox{
+        margin-top: 10px;
+    }
+}
+@media screen and (max-width: 698px) {
+    #AdminForm{
+        width: 50%;
+    }
+    #AdminForm>input{
+        font-size: medium;
+    }
+    #AdminForm>div>input{
+        font-size: medium;
+    }
+}
+@media screen and (max-width: 535px){
+    .ARecvMsg{
+        height: 430px;
+    }
+    .ARecvMsg>div:first-child>div>p{
+        font-size: 14px;
+    }
+    .ARecvMsg>div:first-child>div>p:last-child{
+        width: fit-content;
+    }
+}
+@media screen and (max-width: 489px){
+    .ARecvMsg>div:first-child>div>p{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 435px) {
+    #AdminForm{
+        width: 70%;
+    }
+    #AdminForm>input{
+        font-size: medium;
+    }
+    #AdminForm>div>input{
+        font-size: medium;
+    }
+    #MessagesRecived>h1{
+        font-size: 25px;
+    }
+    .ARecvMsg{
+        width: 85%;
+    }
+}
+@media screen and (max-width: 358px) {
+    #AdminForm{
+        width: 80%;
+    }
+    #AdminForm>input{
+        font-size: medium;
+    }
+    #AdminForm>div>input{
+        font-size: medium;
+    }
+}
+@media screen and (max-width: 344px) {
+    #Admin{
+        width: 101.5%;
+    }
+    .ARecvMsg>div:first-child>div>p{
+        margin-left: 0px;
+    }
+    .Reply{
+        width: 50px;
+    }
+}
+@media screen and (max-width: 300px) {
+    .ARecvMsg{
+        height: 450px;
+    }
+    #MessagesRecived{
+        padding: 0px;
+    }
+    #MessagesRecived>h1{
+        font-size: 20px;
+    }
+}

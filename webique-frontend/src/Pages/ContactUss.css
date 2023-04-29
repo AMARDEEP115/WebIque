@@ -1,12 +1,20 @@
 #Contact{
-    height: 85vh;
-    width: 900px;
+    min-height: 85vh;
+    height: fit-content;
+    /* width: 900px; */
     margin: auto;
+    background-image: url("https://media.istockphoto.com/id/1174989482/photo/gray-abstract-minimal-motion-backgrounds-loopable-elements-4k-resolution.jpg?b=1&s=170667a&w=0&k=20&c=hn1EQ6i2fEBS0Cf-tFMfUsbNBGY1ATMNwgz1n7ffIKg=");
+    background-repeat: no-repeat;
+    background-size: cover;
+    backface-visibility: inherit;
+    margin-top: -20px;
+    padding-top: 20px;
 }
 
 #Contact>div{
     display: flex;
     margin-top: 50px;
+    margin-left: 13%;
 }
 #ContactAddress{
     width: 40%;
@@ -38,7 +46,7 @@
 
 
 #Form{
-    width: 55%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     box-shadow: rgba(96, 94, 94, 0.2) 0px 2px 8px 0px;
@@ -51,6 +59,8 @@
     font-size: larger;
     border: none;
     border-bottom: 2px solid rgb(166, 163, 163);
+    border-radius: 4px;
+    background-color: rgb(235, 233, 233);
 }
 #Form>input:focus{
     outline: none;
@@ -62,6 +72,9 @@
     margin-top: 20px;
     font-size: larger;
     height: 100px;
+    border-radius: 3px;
+    border-color: rgb(190, 190, 190);
+    background-color: rgb(235, 233, 233);
 }
 #Form>textarea:focus{
     outline: none;
@@ -72,6 +85,14 @@
     height: 50px;
     font-weight: 600;
     color: rgb(68, 64, 64);
+    border-radius: 5px;
+    border: 1px solid white;
+    background-color: gainsboro;
+}
+#Form>button:hover{
+    color: white;
+    border: 1px solid grey;
+    background-color: grey;
 }
 
 #MessageIn{
@@ -122,6 +143,7 @@
     #Contact>div{
         flex-direction: column;
         align-items: center;
+        margin-left: 0%;
     }
     #ContactAddress{
         width: 70%;
@@ -145,6 +167,12 @@
     }
     #Form>input{
         font-size: 15px;
+    }
+    #MessageIn{
+        width: 80%;
+    }
+    #MessageOut{
+        width: 80%;
     }
 }
 @media screen and (max-width: 355px){

@@ -1,0 +1,33 @@
+#About{
+    background-image: url("https://i.makeagif.com/media/1-12-2021/YsWRDA.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    backface-visibility: inherit;
+    margin-top: -20px;
+    padding-top: 20px;
+}
+#About>p{
+    font-weight: 500;
+    font-size: 20px;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 50px;
+    color: rgb(46, 45, 45);
+    line-height: 40px;
+}
+#About>p>a{
+    color: black;
+}
+
+@media screen and (max-width: 775px) {
+    #About>p{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 444px) {
+    #About>p{
+        font-size: 16px;
+    }
+}
