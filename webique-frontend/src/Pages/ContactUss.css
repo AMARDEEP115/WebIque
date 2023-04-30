@@ -100,9 +100,8 @@
     padding: 20px;
     position: fixed;
     z-index: 1100;
-    top: 0;
-    margin-left: 45%;
-    /* background-color: grey; */
+    top: 10%;
+    left: 25%;
     border-radius: 10px;
     margin-top: 10px;
     color: white;
@@ -118,8 +117,8 @@
     padding: 20px;
     position: fixed;
     z-index: 1100;
-    top: 0;
-    margin-left: 45%;
+    top: 10%;
+    left: 25%;
     border-radius: 10px;
     margin-top: 10px;
     color: white;
@@ -157,7 +156,46 @@
         width: 70%;
     }
 }
-
+@media screen and (max-width: 650px){
+    #MessageIn{
+        top: 10%;
+        left: 22%;
+    }
+    #MessageOut{
+        top: 10%;
+        left: 22%;
+    }
+}
+@media screen and (max-width: 523px){
+    #MessageIn{
+        top: 10%;
+        left: 20%;
+    }
+    #MessageOut{
+        top: 10%;
+        left: 20%;
+    }
+}
+@media screen and (max-width: 490px){
+    #MessageIn{
+        top: 10%;
+        left: 18%;
+    }
+    #MessageOut{
+        top: 10%;
+        left: 18%;
+    }
+}
+@media screen and (max-width: 450px){
+    #MessageIn{
+        top: 10%;
+        left: 14%;
+    }
+    #MessageOut{
+        top: 10%;
+        left: 14%;
+    }
+}
 @media screen and (max-width: 432px){
     #ContactAddress>div>h1{
         font-size: 20px;
@@ -174,6 +212,14 @@
         width: 80%;
         display: block;
         margin: auto;
+    }
+    #MessageIn{
+        top: 10%;
+        left: 5%;
+    }
+    #MessageOut{
+        top: 10%;
+        left: 5%;
     }
 }
 @media screen and (max-width: 355px){
@@ -195,5 +241,13 @@
     }
     #Form{
         width: 80%;
+    }
+    #MessageIn{
+        top: 10%;
+        left: 3%;
+    }
+    #MessageOut{
+        top: 10%;
+        left: 3%;
     }
 }

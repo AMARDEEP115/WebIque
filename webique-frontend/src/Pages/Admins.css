@@ -165,15 +165,14 @@
     color: white;
     background-color: black;
 }
-
 #ToastIn{
     width: fit-content;
     padding: 20px;
     position: fixed;
     z-index: 1000;
-    top: 0;
-    margin-top: 10px;
-    margin-left: 43%;
+    top: 10%;
+    left: 43%;
+    margin-top: 20px;
     border-radius: 10px;
     color: white;
     animation-duration: 1s;
@@ -181,33 +180,52 @@
 }
 @keyframes toastin {
     from {margin-top: -100px;}
-    to {margin-top: 10px;}
+    to {margin-top: 20px;}
 }
 #ToastOut{
     width: fit-content;
     padding: 20px;
     position: fixed;
     z-index: 1000;
-    top: 0;
-    margin-left: 43%;
+    top: 10%;
+    left: 43%;
     border-radius: 10px;
     color: white;
     animation-duration: 1s;
     animation-name: toastout;
 }
 @keyframes toastout {
-    from {margin-top: 10px;}
+    from {margin-top: 20px;}
     to {margin-top: -100px;}
 }
+
 
 @media screen and (max-width: 1024px) {
     #AdminForm{
         width: 30%;
     }
+    #ToastIn{
+        top: 10%;
+        left: 38%;
+    }
+    #ToastOut{
+        top: 10%;
+        left: 38%;
+    }
 }
 @media screen and (max-width: 904px) {
     #AdminForm{
         width: 40%;
+    }
+}
+@media screen and (max-width: 850px){
+    #ToastIn{
+        top: 10%;
+        left: 35%;
+    }
+    #ToastOut{
+        top: 10%;
+        left: 35%;
     }
 }
 @media screen and (max-width: 758px){
@@ -235,6 +253,16 @@
         margin-top: 10px;
     }
 }
+@media screen and (max-width: 724px){
+    #ToastIn{
+        top: 10%;
+        left: 32%;
+    }
+    #ToastOut{
+        top: 10%;
+        left: 32%;
+    }
+}
 @media screen and (max-width: 698px) {
     #AdminForm{
         width: 50%;
@@ -244,6 +272,16 @@
     }
     #AdminForm>div>input{
         font-size: medium;
+    }
+}
+@media screen and (max-width: 620px){
+    #ToastIn{
+        top: 10%;
+        left: 28%;
+    }
+    #ToastOut{
+        top: 10%;
+        left: 28%;
     }
 }
 @media screen and (max-width: 535px){
@@ -265,6 +303,16 @@
         margin-right: 0px;
     }
 }
+@media screen and (max-width: 450px){
+    #ToastIn{
+        top: 10%;
+        left: 25%;
+    }
+    #ToastOut{
+        top: 10%;
+        left: 25%;
+    }
+}
 @media screen and (max-width: 435px) {
     #AdminForm{
         width: 70%;
@@ -280,6 +328,16 @@
     }
     .ARecvMsg{
         width: 85%;
+    }
+}
+@media screen and (max-width: 380px){
+    #ToastIn{
+        top: 10%;
+        left: 21%;
+    }
+    #ToastOut{
+        top: 10%;
+        left: 21%;
     }
 }
 @media screen and (max-width: 358px) {
@@ -324,6 +382,14 @@
     .ARecvMsg{
         height: 480px;
     }
+    #ToastIn{
+        top: 10%;
+        left: 18%;
+    }
+    #ToastOut{
+        top: 10%;
+        left: 18%;
+    }
 }
 @media screen and (max-width: 300px) {
     .ARecvMsg{
@@ -344,5 +410,13 @@
     }
     #MsgRmRpBox>button{
         margin-left: 0px;
+    }
+    #ToastIn{
+        top: 10%;
+        left: 15%;
+    }
+    #ToastOut{
+        top: 10%;
+        left: 15%;
     }
 }
