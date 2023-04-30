@@ -1,6 +1,6 @@
 # WebIque
 <br/>
-**Note For Admin Login, use email - admin@webique.com , and password - admin
+** Note For Admin Login, use email - admin@webique.com , and password - admin
 <br/>
 <br/>
 This website is a simple yet unique example of a responsive website. It consists of four pages, each with a responsive header and footer for easy navigation and displaying important details.
@@ -46,7 +46,9 @@ For Admin Login, use email - admin@webique.com , and password - admin
 <br/>
 <img src="https://user-images.githubusercontent.com/105987614/235362398-fdc5be58-eb6f-49c8-8d25-ccd7084db79d.png" alt="Four" />
 <br/>
+
 # Contact Us Page:
+<br/>
 <br/>
 <img src="https://user-images.githubusercontent.com/105987614/235362420-060106d4-3652-44aa-9454-b34bf7d46514.png" alt="Five" />
 <br/>
@@ -54,6 +56,7 @@ For Admin Login, use email - admin@webique.com , and password - admin
 <br/>
 
 # Admin Page:
+<br/>
 <br/>
 <img src="https://user-images.githubusercontent.com/105987614/235362449-780b037e-03f3-48b4-bcb5-e636b35c6986.png" alt="Seven" />
 <br/>
