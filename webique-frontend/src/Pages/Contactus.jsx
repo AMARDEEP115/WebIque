@@ -11,13 +11,16 @@ const initialState={
 
 const ContactUs=()=>{
     const [query,setQuery]=useState(initialState);
-    const [message,setMessage]=useState("");
+    const [message,setMessage]=useState({msg:"",bgClr:""});
     const reff=useRef();
 
     const handleSubmit=(e)=>{
         e.preventDefault();
+        // setMessage({msg:"Something went wrong, try again !",bgClr:"red"});
+        // setMessage({msg:"Please enter your email or phone number",bgClr:"orange"});
+        setMessage({msg:"Thank you for contacting us, we will reach you soon...",bgClr:"green"});
         if(query.email==="" && query.mobile===""){
-            setMessage("Please enter your email or phone number");
+            // setMessage({msg:"Please enter your email or phone number",bgClr:"orange"});
             reff.current.style.display="block";
             reff.current.id="MessageIn";
             setQuery(initialState);
@@ -31,7 +34,7 @@ const ContactUs=()=>{
                 clearTimeout(timeOutTwo);
             },4460);
         } else {
-            setMessage("Thank you for contacting us, we will reach you soon...");
+            // setMessage({msg:"Thank you for contacting us, we will reach you soon...",bgClr:"green"});
             reff.current.style.display="block";
             reff.current.id="MessageIn";
             setQuery(initialState);
@@ -75,8 +78,8 @@ const ContactUs=()=>{
                 <button type="submit">SUBMIT</button>
             </form>
         </div>
-        <div id="message" ref={reff} style={{display:"none"}}>
-            {message}
+        <div id="message" ref={reff} style={{display:"none",backgroundColor:message.bgClr}}>
+            {message.msg}
         </div>
     </div>
 }

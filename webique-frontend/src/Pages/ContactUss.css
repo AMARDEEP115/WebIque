@@ -99,39 +99,36 @@
     width: fit-content;
     padding: 20px;
     position: fixed;
-    z-index: 1000;
+    z-index: 1100;
     top: 0;
-    margin-left: 50%;
-    background-color: grey;
+    margin-left: 45%;
+    /* background-color: grey; */
     border-radius: 10px;
+    margin-top: 10px;
     color: white;
     animation-duration: 1s;
     animation-name: fadein;
 }
 @keyframes fadein {
-    from {background-color: transparent;
-        color: transparent;}
-    to {background-color: grey;
-        color: white;}
+    from {margin-top: -100px;}
+    to {margin-top: 50px;}
 }
 #MessageOut{
     width: fit-content;
     padding: 20px;
     position: fixed;
-    z-index: 1000;
+    z-index: 1100;
     top: 0;
-    margin-left: 50%;
-    background-color: white;
+    margin-left: 45%;
     border-radius: 10px;
+    margin-top: 10px;
     color: white;
-    animation-duration: .5s;
+    animation-duration: 1s;
     animation-name: fadeout;
 }
 @keyframes fadeout {
-    from {background-color: grey;
-        color: white;}
-    to {background-color: transparent;
-        color: transparent;}
+    from {margin-top: 50px;}
+    to {margin-top: -100px;}
 }
 
 @media screen and (max-width: 935px) {
@@ -170,9 +167,13 @@
     }
     #MessageIn{
         width: 80%;
+        display: block;
+        margin: auto;
     }
     #MessageOut{
         width: 80%;
+        display: block;
+        margin: auto;
     }
 }
 @media screen and (max-width: 355px){
