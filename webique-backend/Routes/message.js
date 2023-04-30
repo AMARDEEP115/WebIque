@@ -1,8 +1,11 @@
+//  This file is a seprate file for all required routes for messages from any vistor.
+
 const {Router}=require("express");
 const { msgModel } = require("../Model/message.model");
 
 const messageRouter=Router();
 
+// To get all messages recived from data base
 messageRouter.get("/all", async(req,res)=>{
     try{
         let allMsg=await msgModel.find();
@@ -14,6 +17,7 @@ messageRouter.get("/all", async(req,res)=>{
     }
 });
 
+// To add a new messages in data base
 messageRouter.post("/add",async(req,res)=>{
     let body=req.body;
     try{
@@ -25,6 +29,7 @@ messageRouter.post("/add",async(req,res)=>{
     }
 });
 
+// To delete a messages from data base
 messageRouter.delete("/remove/:id",async(req,res)=>{
     let ID=req.params.id;
     try{

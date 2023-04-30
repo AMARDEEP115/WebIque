@@ -18,9 +18,9 @@ app.get("/",(req,res)=>{
     res.send("Home Page");
 });
 
-app.use("/message",messageRouter);
+app.use("/message",messageRouter); // messages route will be accessed from this
 
-app.use("/admin",adminRouter);
+app.use("/admin",adminRouter); // admin routes will be accessed from this
 
 app.listen(process.env.Port || 8080 , async()=>{
     try{

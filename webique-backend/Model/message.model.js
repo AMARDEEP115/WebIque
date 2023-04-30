@@ -1,3 +1,5 @@
+// This file tells how the data stored in data base will look like.
+
 const mongoose=require("mongoose");
 
 const msgSchema=mongoose.Schema({

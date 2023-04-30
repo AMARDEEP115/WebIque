@@ -1,3 +1,5 @@
+// This file connect's our backend with MongoDB data base.
+
 const mongoose=require("mongoose");
 
 require("dotenv").config();

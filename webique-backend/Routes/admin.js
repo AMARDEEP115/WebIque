@@ -1,7 +1,10 @@
+//  This file is a seprate file for all required routes for admin.
+
 const {Router}=require("express");
 
 const adminRouter=Router();
 
+// To authenticate if admin or not.
 adminRouter.post("/login",(req,res)=>{
     let body=req.body;
     try{
@@ -14,5 +17,6 @@ adminRouter.post("/login",(req,res)=>{
         res.send({"message":"Something went wrong"});
     }
 });
+
 
 module.exports=adminRouter;
