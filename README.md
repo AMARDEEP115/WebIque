@@ -27,6 +27,7 @@ For Admin Login, use email - admin@webique.com , and password - admin
 
 # Website Looks like:
 <br/>
+
 # Home Page : <br/>
 ## a) Full Screen:
 <br/>
