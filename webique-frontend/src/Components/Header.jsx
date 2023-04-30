@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import WebIque from "../Logo/WebIqueLogo.png";
 import "./Headerr.css";
 
-const Header=()=>{
+const Header=({ isAuth, setIsAuth })=>{
     const refTag=useRef();
     const Navi=useNavigate();
 
@@ -19,6 +19,11 @@ const Header=()=>{
         },480);
     }
 
+    const handleAdminLogout=()=>{
+        setIsAuth(false);
+        localStorage.removeItem("webiqueAuth");
+    }
+
     return <header id="Header">
         <img id="Logo" src={WebIque} alt="Logo" onClick={()=>Navi("/")}/>
         <div id="FullScreenNav">
@@ -26,6 +31,7 @@ const Header=()=>{
             <Link to="/aboutus">ABOUT US</Link>
             <Link to="/contactus">CONTACT US</Link>
             <Link to="/admin">ADMIN</Link>
+            {isAuth && <Link onClick={handleAdminLogout}>LOGOUT</Link>}
         </div>
         <div id="Hamburger" onClick={openDrawer}>
             <div id="F"></div>
@@ -43,6 +49,7 @@ const Header=()=>{
                 <Link to="/aboutus">ABOUT</Link>
                 <Link to="/contactus">CONTACT US</Link>
                 <Link to="/admin">ADMIN</Link>
+                {isAuth && <Link onClick={handleAdminLogout}>LOGOUT</Link>}
             </div>
         </div>
     </header>

@@ -156,7 +156,6 @@
     font-weight: 500;
     color: black;
     text-align: center;
-    margin-right: 30px;
     border: 2px solid black;
     border-radius: 5px;
     width: 80px;
@@ -262,6 +261,9 @@
     .ARecvMsg>div:first-child>div>p{
         font-size: 14px;
     }
+    .Reply{
+        margin-right: 0px;
+    }
 }
 @media screen and (max-width: 435px) {
     #AdminForm{
@@ -290,6 +292,21 @@
     #AdminForm>div>input{
         font-size: medium;
     }
+    #MsgRmRpBox{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 100%;
+    }
+    #MsgRmRpBox>button{
+        margin-left: -10px;
+    }
+    .Reply{
+        width: fit-content;
+    }
+    .ARecvMsg{
+        height: 480px;
+    }
 }
 @media screen and (max-width: 344px) {
     #Admin{
@@ -298,8 +315,14 @@
     .ARecvMsg>div:first-child>div>p{
         margin-left: 0px;
     }
+    #MsgRmRpBox>button{
+        margin-left: -20px;
+    }
     .Reply{
-        width: 50px;
+        width: fit-content;
+    }
+    .ARecvMsg{
+        height: 480px;
     }
 }
 @media screen and (max-width: 300px) {
@@ -311,5 +334,15 @@
     }
     #MessagesRecived>h1{
         font-size: 20px;
+    }
+    .ARecvMsg{
+        height: 500px;
+    }
+    #MsgRmRpBox{
+        display: flex;
+        flex-direction: column;
+    }
+    #MsgRmRpBox>button{
+        margin-left: 0px;
     }
 }

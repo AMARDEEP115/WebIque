@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import "./ContactUss.css";
-import { Link } from "react-router-dom";
+import axios from "axios";
+import { DBURL } from "../dburl";
 
 const initialState={
     name:"",
@@ -16,14 +17,10 @@ const ContactUs=()=>{
 
     const handleSubmit=(e)=>{
         e.preventDefault();
-        // setMessage({msg:"Something went wrong, try again !",bgClr:"red"});
-        // setMessage({msg:"Please enter your email or phone number",bgClr:"orange"});
-        setMessage({msg:"Thank you for contacting us, we will reach you soon...",bgClr:"green"});
         if(query.email==="" && query.mobile===""){
-            // setMessage({msg:"Please enter your email or phone number",bgClr:"orange"});
+            setMessage({msg:"Please enter your email or phone number",bgClr:"orange"});
             reff.current.style.display="block";
             reff.current.id="MessageIn";
-            setQuery(initialState);
             let timeOut=setTimeout(()=>{
                 reff.current.id="MessageOut";
                 clearTimeout(timeOut);
@@ -34,19 +31,34 @@ const ContactUs=()=>{
                 clearTimeout(timeOutTwo);
             },4460);
         } else {
-            // setMessage({msg:"Thank you for contacting us, we will reach you soon...",bgClr:"green"});
-            reff.current.style.display="block";
-            reff.current.id="MessageIn";
-            setQuery(initialState);
-            let timeOut=setTimeout(()=>{
-                reff.current.id="MessageOut";
-                clearTimeout(timeOut);
-            },4000);
-            let timeOutTwo=setTimeout(()=>{
-                reff.current.style.display="none";
-                reff.current.id="message";
-                clearTimeout(timeOutTwo);
-            },4460);
+            let obj={};
+            obj.name=query.name;
+            obj.message=query.message;
+            if(query.email!==""){
+                obj.email=query.email;
+            };
+            if(query.mobile!==""){
+                obj.mobile=query.mobile;
+            };
+            axios.post(DBURL+"/message/add",obj).then((res)=>{
+                if(res.data.message==="message added"){
+                    setMessage({msg:"Thank you for contacting us, we will reach you soon...",bgClr:"green"});
+                    setQuery(initialState);
+                } else if(res.data.message==="Something went wrong"){
+                    setMessage({msg:"Something went wrong, try again !",bgClr:"red"});
+                }
+                reff.current.style.display="block";
+                reff.current.id="MessageIn";
+                let timeOut=setTimeout(()=>{
+                    reff.current.id="MessageOut";
+                    clearTimeout(timeOut);
+                },4000);
+                let timeOutTwo=setTimeout(()=>{
+                    reff.current.style.display="none";
+                    reff.current.id="message";
+                    clearTimeout(timeOutTwo);
+                },4460);
+            }).catch(err=>console.log(err));
         }
     };
 
