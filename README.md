@@ -4,17 +4,25 @@
 <br/>
 <br/>
 This website is a simple yet unique example of a responsive website. It consists of four pages, each with a responsive header and footer for easy navigation and displaying important details.
-<br/> 
-All pages have responsive header and footer to navigate and show some extra detais of the website.
 <br/>
+<br/>
+
 The landing page is designed to attract users to the website, with an eye-catching main lead space featuring the website logo, a welcoming message, and inspiring quotes.
 <br/>
+<br/>
+
 The About Us page provides information about the purpose of the website, giving users a better understanding of its goals and objectives.
 <br/>
+<br/>
+
 On the Contact Us page, visitors can find an example of how to reach out to us, along with a form to submit queries or messages. I have also included an alert box to display messages that visitors may receive after submitting the form.
 <br/>
+<br/>
+
 Finally, the Admin page features a login form for the website administrator, who can access the messages and queries received from visitors through the contact form. This provides a secure and efficient way to manage and respond to user feedback.
 <br/>
+<br/>
+
 For Admin Login, use email - admin@webique.com , and password - admin
 
 # Website Looks like:
