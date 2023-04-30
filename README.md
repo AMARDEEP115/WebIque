@@ -7,6 +7,9 @@ This website is a simple yet unique example of a responsive website. It consists
 <br/>
 <br/>
 
+# Frontend:
+
+<br/>
 The landing page is designed to attract users to the website, with an eye-catching main lead space featuring the website logo, a welcoming message, and inspiring quotes.
 <br/>
 <br/>
@@ -24,6 +27,24 @@ Finally, the Admin page features a login form for the website administrator, who
 <br/>
 
 For Admin Login, use email - admin@webique.com , and password - admin
+
+<br/>
+
+# Backend:
+
+<br/>
+<br/>
+I have also implemented a REST API for HTTP requests, and by using Node.js, Express.js, Mongoose, and MongoDB for backend functionality like creating new message, getting all messages stored in database, deleting a message, admin authentication.
+
+<br/>
+<br/>
+
+# Tech Stacks:
+<br/>
+
+##  JavaScript | CSS | REACT JS | NODE JS | EXPRESS JS | MONGOOSE JS | MongoDB | ES6 | Axios | React Icons
+
+<br/>
 
 # Website Looks like:
 <br/>
