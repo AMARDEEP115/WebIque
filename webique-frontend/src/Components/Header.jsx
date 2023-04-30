@@ -1,17 +1,17 @@
 import { useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import WebIque from "../Logo/WebIqueLogo.png";
-import "./Headerr.css";
+import WebIque from "../Logo/WebIqueLogo.png";           // This to get website logo for Navbar.
+import "../AllCSSStyles/Headerr.css";
 
 const Header=({ isAuth, setIsAuth })=>{
-    const refTag=useRef();
-    const Navi=useNavigate();
+    const refTag=useRef();         // This is for taking reference of HTML Tag.
+    const Navi=useNavigate();      // This is to navigate to another page.
 
-    const openDrawer=()=>{
+    const openDrawer=()=>{                   // This function is to open menu bar for small screen.
         refTag.current.id="DrawerOpen";
     }
 
-    const closeDrawer=()=>{
+    const closeDrawer=()=>{                   // This function is to close menu bar for small screen.
         refTag.current.id="DrawerClose";
         let TimeOut=setTimeout(()=>{
             refTag.current.id="Drawer";
@@ -19,7 +19,7 @@ const Header=({ isAuth, setIsAuth })=>{
         },480);
     }
 
-    const handleAdminLogout=()=>{
+    const handleAdminLogout=()=>{             // This function is to handle admin logout.
         setIsAuth(false);
         localStorage.removeItem("webiqueAuth");
     }

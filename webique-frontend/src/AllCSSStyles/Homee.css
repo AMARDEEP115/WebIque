@@ -1,5 +1,4 @@
-/* https://wallpapercave.com/wp/wp3738118.jpg */
-/* https://wallpapercave.com/wp/wp3738118.jpg */
+/* ----------------------------------------------------- Home Page CSS ---------------------------------------- */
 #Home{
     background-image: url("https://wallpapercave.com/wp/wp3738118.jpg");
     min-height: 90vh;
@@ -12,6 +11,7 @@
     justify-content: space-evenly;
 }
 
+/* ------------------------------------- Home Page Logo Wwlcome note box CSS ----------------------------------- */
 #HLeft{
     display: flex;
 }
@@ -24,7 +24,6 @@
     animation-name: write;
     overflow: hidden;
     animation-duration: 5s;
-    /* animation-iteration-count: infinite; */
 }
 #HLeft>div>div>div{
     display: flex;
@@ -62,6 +61,7 @@
     100% {top:0px;}
 }
 
+/* ------------------------------------------------ Home Page Qoutes Box CSS ---------------------------------------- */
 #HRight{
     height: 200px;
     background-image: url("https://c8.alamy.com/zooms/9/503bcc8dc36446068269ce9f6fe038aa/2jafx79.jpg");
@@ -71,7 +71,6 @@
     height: 480px;
     display: flex;
     align-items: center;
-    /* padding-top: 40px; */
 }
 #HRight>p{
     width: 50%;
@@ -82,6 +81,7 @@
     font-style: italic;
 }
 
+/* ----------------------------------------------------- Small Screen CSS ---------------------------------------- */
 @media screen and (max-width: 1151px){
     #Home{
         flex-direction: column;

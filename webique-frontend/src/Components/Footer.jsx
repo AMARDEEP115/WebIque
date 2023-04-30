@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
-import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
-import { RiPagesLine } from "react-icons/ri";
-import { BsFillBriefcaseFill } from "react-icons/bs";
-import FooterLogo from "../Logo/FooterLogo.png";
-import "./footerr.css";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";   // This to get social media icon's from react icons.
+import { RiPagesLine } from "react-icons/ri";                    // This to get social media icon's from react icons.
+import { BsFillBriefcaseFill } from "react-icons/bs";            // This to get social media icon's from react icons.
+import FooterLogo from "../Logo/FooterLogo.png";                 // This to get website logo for footer.
+import "../AllCSSStyles/footerr.css";
 
 const Footer=()=>{
 
-    const ScrollToTop=()=>{
+    const ScrollToTop=()=>{                      // This funtion is to scroll to top of the website.
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }

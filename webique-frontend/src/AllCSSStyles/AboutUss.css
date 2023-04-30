@@ -1,3 +1,4 @@
+/* ---------------------------------------------- About Page Css ------------------------------------------------- */
 #About{
     background-image: url("https://i.makeagif.com/media/1-12-2021/YsWRDA.gif");
     background-repeat: no-repeat;
@@ -19,6 +20,8 @@
 #About>p>a{
     color: black;
 }
+
+/* ---------------------------------------------- Small Screen Css ------------------------------------------------- */
 
 @media screen and (max-width: 775px) {
     #About>p{

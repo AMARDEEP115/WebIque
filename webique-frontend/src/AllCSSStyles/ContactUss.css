@@ -1,7 +1,7 @@
+/* ---------------------------------------------- Contact us Css ------------------------------------------------- */
 #Contact{
     min-height: 85vh;
     height: fit-content;
-    /* width: 900px; */
     margin: auto;
     background-image: url("https://media.istockphoto.com/id/1174989482/photo/gray-abstract-minimal-motion-backgrounds-loopable-elements-4k-resolution.jpg?b=1&s=170667a&w=0&k=20&c=hn1EQ6i2fEBS0Cf-tFMfUsbNBGY1ATMNwgz1n7ffIKg=");
     background-repeat: no-repeat;
@@ -16,6 +16,7 @@
     margin-top: 50px;
     margin-left: 13%;
 }
+/* ---------------------------------------------- Contact Us Address Css ------------------------------------------------- */
 #ContactAddress{
     width: 40%;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -44,7 +45,7 @@
     color: gray;
 }
 
-
+/* ---------------------------------------------- Contact Us Form Css ------------------------------------------------- */
 #Form{
     width: 40%;
     display: flex;
@@ -95,6 +96,7 @@
     background-color: grey;
 }
 
+/* ---------------------------------------------- Alert Box Css ------------------------------------------------- */
 #MessageIn{
     width: fit-content;
     padding: 20px;
@@ -130,6 +132,7 @@
     to {margin-top: -100px;}
 }
 
+/* ---------------------------------------------- Small Screen Css ------------------------------------------------- */
 @media screen and (max-width: 935px) {
     #Contact{
         height: fit-content;

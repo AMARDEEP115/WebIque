@@ -1,9 +1,9 @@
 import { useRef, useState } from "react";
-import "./ContactUss.css";
 import axios from "axios";
-import { DBURL } from "../dburl";
+import { DBURL } from "../dburl";  // This to get the base url of backend API.
+import "../AllCSSStyles/ContactUss.css";
 
-const initialState={
+const initialState={              // This is intial or default state of form data.
     name:"",
     email:"",
     mobile:"",
@@ -11,15 +11,17 @@ const initialState={
 };
 
 const ContactUs=()=>{
-    const [query,setQuery]=useState(initialState);
-    const [message,setMessage]=useState({msg:"",bgClr:""});
-    const reff=useRef();
+    const [query,setQuery]=useState(initialState);          // This is for storing the data of contact us form.
+    const [message,setMessage]=useState({msg:"",bgClr:""}); // This is for toast alert message for storing alert messag and backgorund color.
+    const reff=useRef();                                    // This is for taking reference of HTML Tag.
 
-    const handleSubmit=(e)=>{
+    const handleSubmit=(e)=>{  // This function for handling Contact Us form submition.
         e.preventDefault();
-        if(query.email==="" && query.mobile===""){
+        if(query.email==="" && query.mobile===""){ // This will throw alert if both mobile and email is not present.
+
             setMessage({msg:"Please enter your email or phone number",bgClr:"orange"});
-            reff.current.style.display="block";
+
+            reff.current.style.display="block";    // This is alert box function Start.
             reff.current.id="MessageIn";
             let timeOut=setTimeout(()=>{
                 reff.current.id="MessageOut";
@@ -29,25 +31,33 @@ const ContactUs=()=>{
                 reff.current.style.display="none";
                 reff.current.id="message";
                 clearTimeout(timeOutTwo);
-            },4460);
+            },4460);                                // This is alert box function Ends.
+
         } else {
             let obj={};
+
             obj.name=query.name;
             obj.message=query.message;
+
             if(query.email!==""){
                 obj.email=query.email;
             };
             if(query.mobile!==""){
                 obj.mobile=query.mobile;
             };
-            axios.post(DBURL+"/message/add",obj).then((res)=>{
-                if(res.data.message==="message added"){
+
+            axios.post(DBURL+"/message/add",obj).then((res)=>{  // This is POST request to add new message in data base.
+
+                if(res.data.message==="message added"){ // If message is stored in data base
+
                     setMessage({msg:"Thank you for contacting us, we will reach you soon...",bgClr:"green"});
                     setQuery(initialState);
-                } else if(res.data.message==="Something went wrong"){
+                } else if(res.data.message==="Something went wrong"){ // If something went wrong while storing message in data base.
+
                     setMessage({msg:"Something went wrong, try again !",bgClr:"red"});
                 }
-                reff.current.style.display="block";
+                
+                reff.current.style.display="block";    // This is alert box function Start.
                 reff.current.id="MessageIn";
                 let timeOut=setTimeout(()=>{
                     reff.current.id="MessageOut";
@@ -57,7 +67,8 @@ const ContactUs=()=>{
                     reff.current.style.display="none";
                     reff.current.id="message";
                     clearTimeout(timeOutTwo);
-                },4460);
+                },4460);                                // This is alert box function Ends.
+                
             }).catch(err=>console.log(err));
         }
     };

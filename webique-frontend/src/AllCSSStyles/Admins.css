@@ -4,7 +4,6 @@
     padding-top: 50px;
     padding-bottom: 50px;
     background-image: url("https://thumbs.gfycat.com/HalfThunderousFlyingfox-size_restricted.gif");
-    /* background-repeat:no-repeat; */
     background-size:contain;
     backface-visibility: inherit;
 }
@@ -58,7 +57,6 @@
 }
 #AdminForm>button:hover{
     background-color: rgb(224, 232, 247);
-    /* color: blue; */
     border-color: rgb(224, 232, 247);
     box-shadow: 0px;
 }
@@ -199,7 +197,7 @@
     to {margin-top: -100px;}
 }
 
-
+/* ---------------------------------------------- Small Screen Css ------------------------------------------------- */
 @media screen and (max-width: 1024px) {
     #AdminForm{
         width: 30%;

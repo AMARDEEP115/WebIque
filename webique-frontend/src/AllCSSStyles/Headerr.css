@@ -1,3 +1,4 @@
+/* ---------------------------------------------- Navbar Css ------------------------------------------------- */
 #Header{
     position: -webkit-sticky;
     position: sticky;
@@ -25,9 +26,13 @@
     color: black;
     text-decoration: underline;
 }
+
+/* ---------------------------------------------- Small Screen Menu Css ------------------------------------------------- */
 #Drawer{
     display: none;
 }
+
+/* ---------------------------------------------- Small Screen Hamburger Css ------------------------------------------------- */
 #Hamburger{
     display: none;
 }
@@ -38,6 +43,7 @@
     font-size: 36px;
 }
 
+/* ---------------------------------------------- Small Screen Css ------------------------------------------------- */
 @media screen and (min-width: 100px) and (max-width: 775px) {
     #FullScreenNav{
         display: none;

@@ -1,14 +1,14 @@
-import WebIque from "../Logo/WebIqueLogo.png";
-import quotesBackImg from "../Logo/quotesBackImg.png";
-import { Quotes } from "../Components/Quotes";
-import "./Homee.css";
 import { useEffect, useState } from "react";
+import WebIque from "../Logo/WebIqueLogo.png";          // This to get logo of website.
+import { Quotes } from "../Components/Quotes";          // This to get all qoutes.
+import "../AllCSSStyles/Homee.css";
 let id;
 
 const Home=()=>{
-    const [qts,setQts]=useState(0);
+    const [qts,setQts]=useState(0); // This for storing index of which quote to be shown on screen.
+
     useEffect(()=>{
-        id=setInterval(()=>{
+        id=setInterval(()=>{ // This will change the quotes at every 5 seconds.
             setQts(pre=>{
                 if(pre<=(Quotes.length-2)){
                     return pre+1;
@@ -22,6 +22,7 @@ const Home=()=>{
             return clearInterval(id);
         }
     },[]);
+
     return <div id="Home">
         <div id="HLeft">
             <div>
@@ -53,7 +54,7 @@ const Home=()=>{
             </div>
             <img src={WebIque} alt="Logo" />
         </div>
-        <div id="HRight" style={{backgroundImage:quotesBackImg}}>
+        <div id="HRight">
             <p>{Quotes[qts]}</p>
         </div>
     </div>
