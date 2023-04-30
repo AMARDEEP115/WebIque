@@ -1,5 +1,8 @@
 # WebIque
+<br/>
 **Note For Admin Login, use email - admin@webique.com , and password - admin
+<br/>
+<br/>
 This website is a simple yet unique example of a responsive website. It consists of four pages, each with a responsive header and footer for easy navigation and displaying important details.
 <br/> 
 All pages have responsive header and footer to navigate and show some extra detais of the website.
@@ -15,6 +18,7 @@ Finally, the Admin page features a login form for the website administrator, who
 For Admin Login, use email - admin@webique.com , and password - admin
 
 # Website Looks like:
+<br/>
 # Home Page : <br/>
 ## a) Full Screen:
 <br/>
