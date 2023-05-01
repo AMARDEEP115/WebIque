@@ -3,6 +3,7 @@ const messageRouter = require("./Routes/message");
 const adminRouter = require("./Routes/admin");
 const { connection } = require("./Config/db");
 const cors=require("cors");
+const aboutusRouter = require("./Routes/aboutus");
 
 require("dotenv").config();
 
@@ -18,9 +19,11 @@ app.get("/",(req,res)=>{
     res.send("Home Page");
 });
 
-app.use("/message",messageRouter); // messages route will be accessed from this
+app.use("/message",messageRouter); // messages route will be accessed from this.
 
-app.use("/admin",adminRouter); // admin routes will be accessed from this
+app.use("/admin",adminRouter);     // admin routes will be accessed from this.
+
+app.use("/about",aboutusRouter);   // about us route will be accessed from this.
 
 app.listen(process.env.Port || 8080 , async()=>{
     try{
